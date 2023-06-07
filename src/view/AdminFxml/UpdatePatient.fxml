@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="459.0" style="-fx-background-color: #e1e8f2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdatePatientController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="533.0" prefWidth="444.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
+         <children>
+            <Label layoutX="112.0" layoutY="8.0" prefHeight="46.0" prefWidth="210.0" text="Update Patient" textFill="#146c94">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="57.0" layoutY="229.0" prefHeight="25.0" prefWidth="320.0" promptText="example@gmail.com" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <Label layoutX="62.0" layoutY="384.0" text="Role" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="350.0" text="Gender" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="232.0" layoutY="270.0" text="Phone" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="270.0" text="Age" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="208.0" text="Email" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="141.0" text="Last Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="141.0" text="First Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="228.0" layoutY="73.0" text="Password" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="txtPatient" layoutX="258.0" layoutY="383.0" mnemonicParsing="false" selected="true" text="Patient">
+               <toggleGroup>
+                  <ToggleGroup fx:id="role" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtAdmin" layoutX="156.0" layoutY="383.0" mnemonicParsing="false" text="Admin" toggleGroup="$role">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtFemale" layoutX="258.0" layoutY="349.0" mnemonicParsing="false" text="Female">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtMale" layoutX="156.0" layoutY="349.0" mnemonicParsing="false" selected="true" text="Male" toggleGroup="$gender">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="txtPhone" layoutX="227.0" layoutY="293.0" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtAge" layoutX="57.0" layoutY="293.0" prefHeight="33.0" prefWidth="156.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtLastName" layoutX="227.0" layoutY="163.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtFistName" layoutX="57.0" layoutY="163.0" prefHeight="33.0" prefWidth="156.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <PasswordField fx:id="txtPassword" layoutX="227.0" layoutY="95.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtUserName" layoutX="57.0" layoutY="95.0" prefHeight="33.0" prefWidth="156.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <Label layoutX="58.0" layoutY="73.0" stylesheets="@../../css/style.css" text="User Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegister" layoutX="108.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="227.0" layoutY="453.0" mnemonicParsing="false" onAction="#btnCancel" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Cancel" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CommentController">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="11.0" prefHeight="280.0" prefWidth="419.0" style="-fx-background-color: #AFD3E2; -fx-background-radius: 15;">
+         <children>
+            <Button fx:id="btnSave" layoutX="31.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #146C94;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="114.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnCancel" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #146C94;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <TextArea fx:id="comment" layoutX="38.0" layoutY="66.0" prefHeight="146.0" prefWidth="355.0" promptText="give your patient comment..." style="-fx-border-color: #146C94;" />
+      <Label layoutX="38.0" layoutY="30.0" text="comment:" textFill="#146c94">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

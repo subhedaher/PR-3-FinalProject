@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPatientController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="327.0">
+         <children>
+            <ImageView fx:id="img" fitHeight="500.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/img1.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane opacity="0.8" prefHeight="500.0" prefWidth="361.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="26.0" layoutY="144.0" text="welcome back!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="200.0" text="To access our services, please" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="224.0" text="log in using your credentials" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="250.0" text="below." textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnLoginAdmin" layoutX="26.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnLoginAdmin" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #146C94;" text="Login as Admin" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="361.0" prefHeight="500.0" prefWidth="390.0" style="-fx-background-color: #AFD3E2;">
+         <children>
+            <TextField fx:id="txtUserName" cacheShape="false" layoutX="70.0" layoutY="162.0" prefHeight="39.0" prefWidth="248.0" style="-fx-border-color: #146C94;" />
+            <PasswordField fx:id="txtPassword" layoutX="70.0" layoutY="250.0" prefHeight="39.0" prefWidth="248.0" style="-fx-border-color: #146C94;" />
+            <Label layoutX="70.0" layoutY="129.0" text="User Name" textFill="#146c94">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="217.0" text="Password" textFill="#146c94">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="135.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #146C94;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="92.0" layoutY="29.0" text="Login Patient" textFill="#146c94">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="createAccount" layoutX="123.0" layoutY="358.0" onAction="#createAccount" style="border-buttom: 1;" text="Create Account?" textFill="#146c94" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="382.0" style="-fx-background-color: #e1e8f2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="11.0" prefHeight="427.0" prefWidth="368.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
+         <children>
+            <Label layoutX="50.0" layoutY="14.0" prefHeight="46.0" prefWidth="251.0" text="Update Appointments" textFill="#146c94">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Label layoutX="96.0" layoutY="233.0" text="Time" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="99.0" layoutY="163.0" text="Day" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="time" layoutX="97.0" layoutY="257.0" prefHeight="33.0" prefWidth="189.0" promptText="h:m:s" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="day" layoutX="96.0" layoutY="187.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="date" layoutX="96.0" layoutY="113.0" promptText="y-m-d" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <Button fx:id="btnSave" layoutX="86.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="197.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnCancel" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Cancel" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="96.0" layoutY="88.0" text="Date" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

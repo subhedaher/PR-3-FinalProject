@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterPatientController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="500.0" prefWidth="367.0" style="-fx-background-color: #AFD3E2;">
+         <children>
+            <TextField fx:id="txtEmail" layoutX="26.0" layoutY="240.0" prefHeight="33.0" prefWidth="320.0" promptText="example@gmail.com" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <Label layoutX="28.0" layoutY="362.0" text="Gender" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="283.0" text="Phone" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="283.0" text="Age" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="216.0" text="Email" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="153.0" text="Last Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="153.0" text="First Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="197.0" layoutY="91.0" text="Password" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="69.0" layoutY="22.0" text="Register Patient" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegister" layoutX="61.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <RadioButton fx:id="txtFemale" layoutX="226.0" layoutY="361.0" mnemonicParsing="false" text="Female">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtMale" layoutX="124.0" layoutY="361.0" mnemonicParsing="false" selected="true" text="Male" toggleGroup="$gender">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="txtPhone" layoutX="196.0" layoutY="306.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtAge" layoutX="26.0" layoutY="306.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtLastName" layoutX="196.0" layoutY="175.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtFistName" layoutX="26.0" layoutY="175.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <PasswordField fx:id="txtPassword" layoutX="196.0" layoutY="113.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtUserName" layoutX="26.0" layoutY="113.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <Label layoutX="27.0" layoutY="91.0" stylesheets="@../../css/style.css" text="User Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancel" layoutX="180.0" layoutY="435.0" mnemonicParsing="false" onAction="#btnCancel" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="366.0" layoutY="6.0" prefHeight="500.0" prefWidth="364.0">
+         <children>
+            <ImageView fitHeight="533.0" fitWidth="385.0" layoutY="-37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/img1.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutY="-7.0" opacity="0.85" prefHeight="512.0" prefWidth="385.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="32.0" layoutY="173.0" styleClass="whitelabel" text="Welcome!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="229.0" styleClass="whitelabel" text="To register for an account, please" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="257.0" styleClass="whitelabel" text="fill in the following information" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="283.0" styleClass="whitelabel" text="below." textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: #AFD3E2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreatePatientController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="226.0" style="-fx-background-color: #146C94;">
+         <children>
+            <Label layoutX="21.0" layoutY="25.0" text="Admin Dashboard" textFill="#f6f1f1">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="patients" alignment="BASELINE_LEFT" layoutY="144.0" mnemonicParsing="false" onAction="#patients" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #AFD3E2;" text="Patients" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="appoinments" alignment="BASELINE_LEFT" layoutY="187.0" mnemonicParsing="false" onAction="#appoinments" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #146C94;" text="Appointments" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="bookedAppoinments" alignment="BASELINE_LEFT" layoutY="229.0" mnemonicParsing="false" onAction="#bookedAppoinments" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #146C94;" text="Booked Appointments" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="logout" alignment="BASELINE_LEFT" layoutY="272.0" mnemonicParsing="false" onAction="#logout" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #146C94;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="249.0" layoutY="15.0" prefHeight="570.0" prefWidth="368.0" style="-fx-background-color: #F6F1F1; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="20.0" layoutY="20.0" text="Create Patient" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancel" layoutX="186.0" layoutY="468.0" mnemonicParsing="false" onAction="#btnCancel" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Cancel" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="95.0" stylesheets="@../../css/style.css" text="User Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="20.0" layoutY="117.0" prefHeight="33.0" prefWidth="156.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <PasswordField fx:id="txtPassword" layoutX="190.0" layoutY="117.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtFistName" layoutX="20.0" layoutY="183.0" prefHeight="33.0" prefWidth="156.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtLastName" layoutX="190.0" layoutY="183.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtAge" layoutX="20.0" layoutY="316.0" prefHeight="33.0" prefWidth="156.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <TextField fx:id="txtPhone" layoutX="190.0" layoutY="316.0" prefHeight="33.0" prefWidth="149.0" style="-fx-border-color: #146c94;" styleClass="textField" />
+            <RadioButton fx:id="txtMale" layoutX="119.0" layoutY="371.0" mnemonicParsing="false" selected="true" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtFemale" layoutX="221.0" layoutY="371.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtAdmin" layoutX="119.0" layoutY="405.0" mnemonicParsing="false" text="Admin">
+               <toggleGroup>
+                  <ToggleGroup fx:id="role" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="txtPatient" layoutX="221.0" layoutY="405.0" mnemonicParsing="false" selected="true" text="Patient" toggleGroup="$role">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="btnRegister" layoutX="67.0" layoutY="468.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #146c94;" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="191.0" layoutY="95.0" text="Password" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="161.0" text="First Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="190.0" layoutY="161.0" text="Last Name" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="228.0" text="Email" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="293.0" text="Age" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="195.0" layoutY="293.0" text="Phone" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="372.0" text="Gender" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="406.0" text="Role" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="20.0" layoutY="250.0" prefHeight="25.0" prefWidth="320.0" promptText="example@gmail.com" style="-fx-border-color: #146c94;" styleClass="textField" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

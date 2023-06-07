@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1094.0" style="-fx-background-color: #AFD3E2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppoinmentsController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="226.0" style="-fx-background-color: #146C94;">
+         <children>
+            <Label layoutX="21.0" layoutY="25.0" text="Admin Dashboard" textFill="#f6f1f1">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="patients" alignment="BASELINE_LEFT" layoutY="144.0" mnemonicParsing="false" onAction="#patients" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #146C94;" text="Patients" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="appoinments" alignment="BASELINE_LEFT" layoutY="187.0" mnemonicParsing="false" onAction="#appoinments" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #AFD3E2;" text="Appointments" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="bookedAppoinments" alignment="BASELINE_LEFT" layoutY="229.0" mnemonicParsing="false" onAction="#bookedAppoinments" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #146C94;" text="Booked Appointments" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="logout" alignment="BASELINE_LEFT" layoutY="272.0" mnemonicParsing="false" onAction="#logout" prefHeight="43.0" prefWidth="226.0" style="-fx-background-color: #146C94;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="249.0" layoutY="15.0" prefHeight="570.0" prefWidth="825.0" style="-fx-background-color: #F6F1F1; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="20.0" layoutY="20.0" text="Appointments" textFill="#146c94">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="createAppoinments" alignment="BASELINE_LEFT" layoutX="16.0" layoutY="96.0" mnemonicParsing="false" onAction="#createAppoinments" prefHeight="43.0" prefWidth="211.0" style="-fx-background-color: green;" text="+ Create Appointments" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="showAllAppoinments" alignment="BASELINE_LEFT" layoutX="16.0" layoutY="146.0" mnemonicParsing="false" onAction="#showAllAppoinments" prefHeight="43.0" prefWidth="219.0" style="-fx-background-color: #19A7CE;" text="Show All Appointments" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tableAppoinments" layoutX="16.0" layoutY="216.0" prefHeight="260.0" prefWidth="791.0" style="-fx-border-color: #AFD3E2;">
+               <columns>
+                  <TableColumn fx:id="appointmentDate" prefWidth="134.0" text="Date" />
+                  <TableColumn fx:id="appointmentDay" prefWidth="171.0" text="Day" />
+                  <TableColumn fx:id="appointmentTime" prefWidth="266.0" text="Time" />
+                  <TableColumn fx:id="status" prefWidth="218.0" text="Status" />
+               </columns>
+            </TableView>
+            <Button fx:id="delete" alignment="CENTER" layoutX="140.0" layoutY="492.0" mnemonicParsing="false" onAction="#delete" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #cf6227;" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="update" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="492.0" mnemonicParsing="false" onAction="#update" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #146C94;" text="Update" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

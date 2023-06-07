@@ -1,0 +1,25 @@
+/*.label{
+    -fx-text-fill: #146C94;
+    -fx-font-weight : bold;
+    -fx-font-family : Arial;
+    -fx-font-size: 17;
+}
+
+.btn{
+    -fx-text-fill: white;
+    -fx-background-color: #146C94;
+    -fx-font-weight : bold;
+    -fx-font-size: 13;
+}
+
+.background{
+    -fx-background-color: #F6F1F1;
+}
+
+.whitelabel{
+    -fx-text-fill: white;
+}
+
+.textField{
+    -fx-border-color: #146C94;
+}*/
